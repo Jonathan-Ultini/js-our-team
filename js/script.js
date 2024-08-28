@@ -44,6 +44,20 @@ const teamContainer = document.getElementById('team-container');
 team.forEach(membro => {
   const memberInfo = document.createElement('div');
   memberInfo.classList.add('team-member');
-  memberInfo.innerText = `Nome: ${membro.nome}, Ruolo: ${membro.ruolo}, Foto: ${membro.foto}`;
+
+  const memberName = document.createElement('h2');
+  memberName.innerText = membro.nome;
+
+  const memberRole = document.createElement('p');
+  memberRole.innerText = membro.ruolo;
+
+  const memberPhoto = document.createElement('img');
+  memberPhoto.src = `img/${membro.foto}`;
+  memberPhoto.alt = `${membro.nome} - ${membro.ruolo}`;
+
+  memberInfo.appendChild(memberPhoto);
+  memberInfo.appendChild(memberName);
+  memberInfo.appendChild(memberRole);
   teamContainer.appendChild(memberInfo);
+
 });
