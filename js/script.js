@@ -36,3 +36,14 @@ const team = [
 for (const membro of team) {
   console.log(`Nome: ${membro.nome}, Ruolo: ${membro.ruolo}, Foto: ${membro.foto}`);
 }
+
+
+// MILESTONE 2: Stampa nel DOM delle informazioni dei membri del team
+const teamContainer = document.getElementById('team-container');
+
+team.forEach(membro => {
+  const memberInfo = document.createElement('div');
+  memberInfo.classList.add('team-member');
+  memberInfo.innerText = `Nome: ${membro.nome}, Ruolo: ${membro.ruolo}, Foto: ${membro.foto}`;
+  teamContainer.appendChild(memberInfo);
+});
