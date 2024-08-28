@@ -33,4 +33,6 @@ const team = [
 ];
 
 
-console.table(team);
+for (const membro of team) {
+  console.log(`Nome: ${membro.nome}, Ruolo: ${membro.ruolo}, Foto: ${membro.foto}`);
+}
